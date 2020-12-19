@@ -136,6 +136,14 @@
                     <a  style="color:white" class="nav-link active" href="/jazik/mk">MK</a>
                 </div>
 
+                <div style="  width: 50px;height: 40px; text-align: center; " th:if="${session.en==null}" class="nav-item m-auto">
+                    <a style="color: white ;" class="nav-link active" href="/help">Помош</a>
+                </div>
+
+                <div style="  width: 50px;height: 40px; text-align: center"  th:if="${session.en!=null}" class="nav-item m-auto">
+                    <a  style="color:white ;"  class="nav-link active" href="/help">Help</a>
+                </div>
+
             </form>
         </div>
     </div>
@@ -304,6 +312,17 @@
 
 <footer style="margin-top: -6rem !important;margin-right:40rem" class="text-black-50 mt-xl-5">
     <div class="container">
+        <b>
+            <div>Контакт:
+                <br>
+                Емаил:
+                globalhealth96@gmail.com
+
+
+            </div>
+        </b>
+
+
         <div class="row">
             <div class="col-md-3 col-lg-4 col-xl-3">
 

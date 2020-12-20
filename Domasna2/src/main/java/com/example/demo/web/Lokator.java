@@ -55,7 +55,7 @@ public class Lokator {
         model.addAttribute("lokacii",lista);
 
 
-        httpServletRequest.getSession().setAttribute("prebarano",search);
+        model.addAttribute("prebarano",search);
         System.out.println(aptekaService.findbyC(search));
 
         return "primer";

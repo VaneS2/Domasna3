@@ -47,6 +47,6 @@ public class search {
         model.addAttribute("apteki",lista);
         model.addAttribute("tekst",d);
 
-        return "siteApteki";
+        return "SiteApteki";
     }
 }

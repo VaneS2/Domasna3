@@ -38,7 +38,7 @@ public class Login {
         }
         catch (InvalidUserCredentialsException exception) {
             model.addAttribute("hasError", true);
-            model.addAttribute("error", "ERROR");
+            model.addAttribute("error", "Wrong password or username");
             return "login";
         }
     }

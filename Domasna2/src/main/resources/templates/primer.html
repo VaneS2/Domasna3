@@ -8,6 +8,7 @@
 
         }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8"/>
     <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -185,6 +186,7 @@
 
     <script th:inline="javascript">
         var myval = /*[[${lokacii}]]*/ "Test";
+        var zafokus=  /*[[${ZaFokus}]]*/ "Test";
 
         var d=[];
         var c=[];
@@ -196,8 +198,18 @@
         lo2=parseFloat(lo2)
         lo2=lo2
         lo1=lo1
+        var zumot;
+        if(zafokus==null)
+        {
+            zumot=8;
+        }
+        else{
+            zumot=12;
 
-        const mymap = L.map('issMap').setView([myval[myval.length-1].lat,myval[myval.length-1].lon], 12);
+        }
+console.log(zumot);
+
+        const mymap = L.map('issMap').setView([myval[myval.length-1].lat,myval[myval.length-1].lon], zumot);
 
         const attribution =
             '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors';

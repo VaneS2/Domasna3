@@ -54,6 +54,8 @@ public class Lokator {
         }
         model.addAttribute("lokacii",lista);
 
+        model.addAttribute("ZaFokus",true);
+
 
         model.addAttribute("prebarano",search);
         System.out.println(aptekaService.findbyC(search));

@@ -117,11 +117,11 @@
                 </div>
 
                 <div th:if="${session.user!=null}">
-                    <a th:if="${session.en==null}" class="btn btn-light btn-sm ml-3" href="/logout">
+                    <a th:if="${session.en!=null}" class="btn btn-light btn-sm ml-3" href="/logout">
                         <i class="fa fa-shopping-cart"></i> Log out
                     </a>
 
-                    <a th:if="${session.en!=null}" class="btn btn-light btn-sm ml-3" href="/logout">
+                    <a th:if="${session.en==null}" class="btn btn-light btn-sm ml-3" href="/logout">
                         <i class="fa fa-shopping-cart"></i> Одјави се
 
                     </a>
@@ -178,7 +178,7 @@
 
 
 
-    <div id="issMap"></div>
+    <div style="position: center" id="issMap"></div>
 
 
 

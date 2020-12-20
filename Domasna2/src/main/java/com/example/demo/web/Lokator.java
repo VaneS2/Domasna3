@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class Lokator {
     }
 
     @GetMapping("/search")
-    public String search(HttpSession httpSession, Model model, @RequestParam  String search)
+    public String search(HttpServletRequest httpServletRequest, Model model, @RequestParam  String search)
     {
 
 
@@ -53,7 +54,8 @@ public class Lokator {
         }
         model.addAttribute("lokacii",lista);
 
-        httpSession.setAttribute("prebarano",search);
+
+        httpServletRequest.getSession().setAttribute("prebarano",search);
         System.out.println(aptekaService.findbyC(search));
 
         return "primer";

@@ -51,7 +51,7 @@ public class Register {
             this.authService.register(username, password, repeatedPassword, name, surname,telefon,pol,email);
             return "redirect:/login";
         } catch (InvalidArgumentsException | PasswordsDoNotMatchException exception) {
-            return "redirect:/register?error=" + exception.getMessage();
+            return "redirect:/register?error=" + "Корисничкото име веќе постои";
         }
     }
 

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 public class JazikController {
 
     @GetMapping("/en")
-    public String smenijazik(HttpServletRequest httpServletRequest)
+    public String smenijazik(HttpSession httpServletRequest)
     {
         httpServletRequest.setAttribute("en",1);
 
@@ -21,7 +21,7 @@ public class JazikController {
     }
 
     @GetMapping("/mk")
-    public String smenijaziks(HttpServletRequest httpServletRequest)
+    public String smenijaziks(HttpSession httpServletRequest)
     {
         httpServletRequest.setAttribute("en",null);
 

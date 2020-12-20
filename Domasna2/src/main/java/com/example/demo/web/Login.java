@@ -38,7 +38,7 @@ public class Login {
         }
         catch (InvalidUserCredentialsException exception) {
             model.addAttribute("hasError", true);
-            model.addAttribute("error", exception.getMessage());
+            model.addAttribute("error", "ERROR");
             return "login";
         }
     }

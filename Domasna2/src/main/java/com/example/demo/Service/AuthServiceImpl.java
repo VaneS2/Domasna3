@@ -34,7 +34,7 @@ public class AuthServiceImpl implements AuthService {
         if (!password.equals(repeatPassword))
             throw new PasswordsDoNotMatchException();
         if(this.userRepository.findByUsername(username).isPresent()
-                || !this.userRepository.findByUsername(username).isEmpty())
+                )
             throw new UsernameAlreadyExistsException(username);
 
         Userr user = new Userr(username,password,name,surname,telefon,pol,email);

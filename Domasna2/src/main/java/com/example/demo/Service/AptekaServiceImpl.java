@@ -27,6 +27,8 @@ public class AptekaServiceImpl  implements AptekaService{
 
     @Override
     public Apteka findbyId(Long id) {
-       return siteApteki.findById(id).orElseThrow();
+        Apteka a= new Apteka();
+       return siteApteki.findById(id).orElse(a);
+
     }
 }

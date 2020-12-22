@@ -9,9 +9,9 @@
 
         }
         #lala {text-align: center;
-        margin-top:17.2rem;
-        margin-bottom: 300px;
-        font-size: 110px;
+            margin-top:17.2rem;
+            margin-bottom: 300px;
+            font-size: 110px;
             color: orange;
         }
         #lala1 {text-align: center;
@@ -94,23 +94,23 @@
             <form class="form-inline my-2 my-lg-0">
 
 
-<div th:if="${session.user==null}">
-                <a th:if="${session.en==null}" class="btn btn-light btn-sm ml-3" href="/login">
-                    <i class="fa fa-shopping-cart"></i> Најави се
-                </a>
+                <div th:if="${session.user==null}">
+                    <a th:if="${session.en==null}" class="btn btn-light btn-sm ml-3" href="/login">
+                        <i class="fa fa-shopping-cart"></i> Најави се
+                    </a>
 
-                <a th:if="${session.en==null}" class="btn btn-light btn-sm ml-3" href="/register">
-                    <i class="fa fa-shopping-cart"></i> Регистрирај се
-                </a>
+                    <a th:if="${session.en==null}" class="btn btn-light btn-sm ml-3" href="/register">
+                        <i class="fa fa-shopping-cart"></i> Регистрирај се
+                    </a>
 
-                <a th:if="${session.en!=null}" class="btn btn-light btn-sm ml-3" href="/login">
-                    <i class="fa fa-shopping-cart"></i> Login
-                </a>
+                    <a th:if="${session.en!=null}" class="btn btn-light btn-sm ml-3" href="/login">
+                        <i class="fa fa-shopping-cart"></i> Login
+                    </a>
 
-                <a th:if="${session.en!=null}" class="btn btn-light btn-sm ml-3" href="/register">
-                    <i class="fa fa-shopping-cart"></i> SignUp
-                </a>
-</div>
+                    <a th:if="${session.en!=null}" class="btn btn-light btn-sm ml-3" href="/register">
+                        <i class="fa fa-shopping-cart"></i> SignUp
+                    </a>
+                </div>
                 <div  style="  text-align: center"  th:if="${session.user!=null}" class="nav-item m-auto">
                     <a th:text="${session.user.getName() +' '+ session.user.getSurname()}" style="color:white; font-size: 20px;" class="nav-link active" href="/login/profile"></a>
                 </div>
@@ -161,29 +161,29 @@
     var mu;
 
 
-        function showPosition() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
-                    d.push(position.coords.latitude);
+    function showPosition() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                d.push(position.coords.latitude);
 
-                    c.push(position.coords.longitude);
+                c.push(position.coords.longitude);
 
-                    sessionStorage.setItem("UserLocation1", d);
-                    sessionStorage.setItem("UserLocation2", c);
-                    console.log(positionInfo);
+                sessionStorage.setItem("UserLocation1", d);
+                sessionStorage.setItem("UserLocation2", c);
+                console.log(positionInfo);
 
-                });
-            }
-
+            });
         }
+
+    }
     var lat1=sessionStorage.getItem("UserLocation1");
     var lon1=sessionStorage.getItem("UserLocation2");
     lat1=parseFloat(lat1)
     lon1=parseFloat(lon1)
-   console.log(lat1,lon1);
+    console.log(lat1,lon1);
 
-   var  lat2=41.13822750754988 ;
+    var  lat2=41.13822750754988 ;
     var lon2= 20.807800241549284;
 
     function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
@@ -204,7 +204,7 @@
     }
     console.log(getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2));
 
-        showPosition();
+    showPosition();
 
 
 </script>

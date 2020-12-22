@@ -48,6 +48,7 @@ public class Lokator {
             {
                 cc+=niza[i];
             }
+            cc=aptekaService.convertCyrilic(cc);
 
             lista=aptekaService.findbyC(cc);
 

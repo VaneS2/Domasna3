@@ -40,6 +40,9 @@ public class search {
               cc+=niza[i];
            }
 
+           cc=aptekaService.convertCyrilic(cc);
+           System.out.println(cc);
+
            lista=aptekaService.findbyC(cc);
 
        }

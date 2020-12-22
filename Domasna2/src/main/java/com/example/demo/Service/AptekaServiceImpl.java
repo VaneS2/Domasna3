@@ -39,7 +39,10 @@ public class AptekaServiceImpl  implements AptekaService{
                 }
             }
         }
-        return izlez;
+        if(izlez.length()==0){
+            return message;
+        }else{
+        return izlez;}
     }
 
     @Override
